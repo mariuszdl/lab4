@@ -56,13 +56,23 @@ public class Pong1 extends Application {
     private void initKule() {
         Random lott = new Random();
         for(int i = 0; i < LICZBAKULEK; i++) {
-            kulki[i] = new Kulka(
-                    lott.nextDouble() * ARENAWIDTH + ARENAX1,
-                    lott.nextDouble() * ARENAHEIGHT + ARENAY1,
-                    5 + lott.nextDouble() * 20,
-                    5 + lott.nextDouble() * 20,
-                    15,
-                    Color.WHITESMOKE);
+            if(i % 2 == 0) {
+                kulki[i] = new Kulka(
+                        lott.nextDouble() * ARENAWIDTH + ARENAX1,
+                        lott.nextDouble() * ARENAHEIGHT + ARENAY1,
+                        5 + lott.nextDouble() * 20,
+                        5 + lott.nextDouble() * 20,
+                        24,
+                        Color.WHITESMOKE);
+            } else {
+                kulki[i] = new Rugby(
+                        lott.nextDouble() * ARENAWIDTH + ARENAX1,
+                        lott.nextDouble() * ARENAHEIGHT + ARENAY1,
+                        5 + lott.nextDouble() * 20,
+                        5 + lott.nextDouble() * 20,
+                        24,
+                        12);
+            }
         }
     }
 

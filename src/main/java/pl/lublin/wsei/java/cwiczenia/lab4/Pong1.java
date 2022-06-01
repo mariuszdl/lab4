@@ -70,6 +70,7 @@ public class Pong1 extends Application {
                         lott.nextDouble() * ARENAHEIGHT + ARENAY1,
                         5 + lott.nextDouble() * 20,
                         5 + lott.nextDouble() * 20,
+                        5,
                         24,
                         12);
             }
